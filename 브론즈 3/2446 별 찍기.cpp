@@ -1,32 +1,48 @@
 #include <stdio.h>
+void call();
+void num(int a);
+int num1(int b);
 
-int main () {
-
-int n;
-scanf("%d", &n);
-
-int i,j;
-for(i=0; i<n; i++) {
+void call() {
+	printf("숫자 입력 : \n");
 	
-
- for(j=0; j<i+0; j++) {
-	printf(" ");
-}
- for(j=0; j<(n*2-1)-i*2; j++) {
-	printf("*");
 }
 
-printf("\n");
- }
+void num(int a) {
+	int i;
+	for(i=1; i<=a; i++) {
+		printf("%d",i);
+	}	
+	
+}
+int num1(int b) {
+	int i,sum=0;
+	for(i=1; i<=b; i++) {
+		sum = sum + i;
+ 
+	}
+	return sum;
+}
 
-for(i=0; i<n-1; i++) {
+int main (void) {
+	int result,result2, y;
+	call();
+	num(7);
+	result = num1(3);
+	printf("\n3까지의 합은: %d \n",result);
+	printf("어디까지의 합? "); 
+	scanf("%d",&y);
+	result2 = num1(y);
+	printf("%d 까지의 합은 : %d", y, result2);    
+return 0;
 
-for(j=0; j<n-i-2; j++) {
-	printf(" ");
+
+
+
+
+
+
+
 }
-for(j=0; j<3+i*2; j++) {
-	printf("*");
-}
-printf("\n");
-}
-}
+
+
